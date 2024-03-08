@@ -8,7 +8,7 @@
 //esta aqui com ```
 let a = "olá"
 let b = 10
-let 1 = A
+let 1 = C
 let 2 = A
 let 3 = A
 let 4 = A
@@ -30,11 +30,11 @@ print(a)
 
 Escolha a opção que responde corretamente:
 
-~~a) Imprime os números pares de 1 a 10.~~
+a) Imprime os números pares de 1 a 10.
 
 b) Imprime os números ímpares de 1 a 10.
 
-c) Imprime os números pares de 2 a 10.
+~~c) Imprime os números pares de 2 a 10.~~
 
 d) Imprime os números ímpares de 2 a 10.
 
