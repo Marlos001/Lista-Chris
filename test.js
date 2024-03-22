@@ -1,24 +1,47 @@
-class Funcionario{
-    constructor(nome, idade, salarioBase){
-      this.nome = nome
-      this.idade = idade
-      this.salarioBase = salarioBase
+function calculaOrcamento2(){
+
+    var gastos = [3600, 950, 620, 38];
+    var totalGastos = gastos[0];
+    var salario = 3500;
+    var statusSaldo =  'positivo';
+    var saldo = 0;
+    var i = 1;
+
+    while(salario >= totalGastos && i<gastos.length){
+        totalGastos += gastos[i];
+        i++;
     }
-    calcularSalario(){
-      return this.salarioBase
-    }
-  }
-  
-  class Professor extends Funcionario{
-    constructor(nome, idade, salarioBase, disciplina, hrAulaSemana){
-    super(nome, idade, salarioBase);
-    this.disciplina = disciplina
-    this.hrAulaSemana = hrAulaSemana
-    }
-    calcularSalario(valorHrAula){
-      return this.hrAulaSemana * 4 * valorHrAula + this.salarioBase
-    }
-  }
-  
-  const professor1 = new Professor('Chris', 40, 1000, 'programação', 8)
-  console.log(professor1.calcularSalario(2000))
+
+    saldo = salario - totalGastos;
+    if (saldo < 0 ){
+        statusSaldo = 'negativo';
+    } 
+    console.log (`Seu saldo é ${statusSaldo} de ${saldo}. `);
+}
+
+calculaOrcamento2();
+
+
+function calculaOrcamento(){
+
+    var gastos = [3600, 950, 620, 38];
+    var totalGastos = gastos[0];
+    var salario = 3500;
+    var saldo = 0; 
+    var statusSaldo =  'positivo';
+    var i = 1;
+
+    do{
+        totalGastos += gastos[i];
+        i++;
+    } while(salario >= totalGastos && i<gastos.length)
+    
+    saldo = salario - totalGastos;
+
+    if (saldo < 0 ){
+        statusSaldo = 'negativo';
+    } 
+    console.log (`Seu saldo é ${statusSaldo} de ${saldo}. `);
+}~
+
+calculaOrcamento();
